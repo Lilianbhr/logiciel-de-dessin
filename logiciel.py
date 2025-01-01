@@ -11,6 +11,7 @@ blanc = pygame.Color(255, 255, 255)
 screen.fill(blanc)
 
 running = True
+debut_ligne = (0, 0)
 while running :
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -18,11 +19,11 @@ while running :
         elif event.type == pygame.KEYDOWN :
             if event.key == pygame.K_ESCAPE :
                 running = False
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            debut_ligne = pygame.mouse.get_pos()
-        elif event.type == pygame.MOUSEBUTTONUP:
+        elif event.type == pygame.MOUSEMOTION:
             fin_ligne = pygame.mouse.get_pos()
-            pygame.draw.line(screen, noir, debut_ligne, fin_ligne, 1)
+            if pygame.mouse.get_pressed() == (1, 0, 0):
+                pygame.draw.line(screen, noir, debut_ligne, fin_ligne, 1)
+            debut_ligne = fin_ligne
         pygame.display.flip()
 
 pygame.quit()
