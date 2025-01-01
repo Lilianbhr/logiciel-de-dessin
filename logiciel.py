@@ -19,6 +19,7 @@ screen.fill(couleur["blanc"])
 running = True
 debut_ligne = (0, 0)
 current_color = couleur["noir"]
+epaisseur = 1
 while running :
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -34,10 +35,16 @@ while running :
                 current_color = couleur["bleu"]
             elif event.key == pygame.K_n:
                 current_color = couleur["noir"]
+            elif event.key == pygame.K_p:
+                epaisseur += 1
+            elif event.key == pygame.K_m:
+                epaisseur -= 1
+                if epaisseur < 1 :
+                    epaisseur = 1
         elif event.type == pygame.MOUSEMOTION:
             fin_ligne = pygame.mouse.get_pos()
             if pygame.mouse.get_pressed() == (1, 0, 0):
-                pygame.draw.line(screen, current_color, debut_ligne, fin_ligne, 1)
+                pygame.draw.line(screen, current_color, debut_ligne, fin_ligne, epaisseur)
             debut_ligne = fin_ligne
         pygame.display.flip()
 
