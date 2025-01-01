@@ -7,7 +7,8 @@ hauteur = 400
 screen = pygame.display.set_mode((largeur, hauteur))
 pygame.display.set_caption("logiciel de dessin")
 noir = pygame.Color(0, 0, 0)
-screen.fill(noir)
+blanc = pygame.Color(255, 255, 255)
+screen.fill(blanc)
 
 running = True
 while running :
@@ -18,10 +19,10 @@ while running :
             if event.key == pygame.K_ESCAPE :
                 running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
-            print("event")
+            debut_ligne = pygame.mouse.get_pos()
         elif event.type == pygame.MOUSEBUTTONUP:
-            print("event")
-
+            fin_ligne = pygame.mouse.get_pos()
+            pygame.draw.line(screen, noir, debut_ligne, fin_ligne, 1)
         pygame.display.flip()
 
 pygame.quit()
