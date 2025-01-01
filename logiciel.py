@@ -43,7 +43,7 @@ while running :
                     epaisseur = 1
             elif event.key == pygame.K_s:
                 name = input("entrez le nom du fichier : ")
-                pygame.image.save(screen, f"saved/{name}.png")
+                pygame.image.save(screen, f"../../{name}.png")
         elif event.type == pygame.MOUSEMOTION:
             fin_ligne = pygame.mouse.get_pos()
             if pygame.mouse.get_pressed() == (1, 0, 0):
