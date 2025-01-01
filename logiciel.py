@@ -17,5 +17,11 @@ while running :
         elif event.type == pygame.KEYDOWN :
             if event.key == pygame.K_ESCAPE :
                 running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print("event")
+        elif event.type == pygame.MOUSEBUTTONUP:
+            print("event")
+
+        pygame.display.flip()
 
 pygame.quit()
