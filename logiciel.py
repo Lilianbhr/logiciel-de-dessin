@@ -6,7 +6,8 @@ couleur = {
     "blanc" : pygame.Color(255, 255, 255),
     "rouge" : pygame.Color(255, 0, 0),
     "vert" : pygame.Color(0, 255, 0),
-    "bleu" : pygame.Color(0, 0, 255)
+    "bleu" : pygame.Color(0, 0, 255),
+    "jaune" : pygame.Color(255, 255, 0)
 }
 
 # Fenêtre
@@ -35,6 +36,8 @@ while running :
                 current_color = couleur["bleu"]
             elif event.key == pygame.K_n:
                 current_color = couleur["noir"]
+            elif event.key == pygame.K_j:
+                current_color = couleur["jaune"]
             elif event.key == pygame.K_p:
                 epaisseur += 1
             elif event.key == pygame.K_m:
