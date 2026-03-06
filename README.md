@@ -13,7 +13,7 @@ Ce projet est un logiciel de dessin minimaliste et performant réalisé avec **P
 
 ##  Concepts techniques utilisés
 
-En analysant le code, j'ai mis en pratique plusieurs notions clés de programmation :
+En structurant le code, j'ai mis en pratique plusieurs notions clés de programmation :
 - **Structures de données** : Utilisation d'un dictionnaire pour mapper les noms des couleurs aux objets `pygame.Color`.
 - **Gestion des événements** : Capture et traitement des événements `MOUSEMOTION` et `KEYDOWN`.
 - **Interpolation de tracé** : Calcul de lignes entre deux positions successives (`debut_ligne` et `fin_ligne`) pour assurer un dessin continu même lors de mouvements rapides de la souris.
