@@ -8,7 +8,7 @@ Ce projet est un logiciel de dessin minimaliste et performant réalisé avec **P
 - **Raccourcis clavier intelligents** : 
   - Changement de couleur instantané (`N` pour Noir, `R` pour Rouge, `V` pour Vert, `B` pour Bleu, `J` pour Jaune).
   - Gestion de l'épaisseur du trait (`P` pour augmenter, `M` pour diminuer).
-- **Exportation** : Sauvegarde de la création au format `.png` avec la touche `S` ainsi qu'une entrée console pour le nom.
+- **Exportation** : Sauvegarde de la création au format `.png` à la racine du projet avec la touche `S` ainsi qu'une entrée console pour le nom.
 - **Contrôles de sécurité** : Empêche l'épaisseur du trait de descendre en dessous de 1.
 
 ##  Concepts techniques utilisés
